@@ -1,0 +1,23 @@
+{
+  "title": "Добавить массив",
+  "help": "Добавляет двумерный массив и редактор на сцену",
+  "icon": "",
+  "chain": [
+    {
+      "ability": "create-robot",
+      "input": "/Scene",
+      "nameinchain": "/create-robot",
+      "initParams": [
+        {
+          "guid": "type",
+          "value": "Array2dRobot"
+        }
+      ]
+    },
+    {
+      "ability": "array2d-edit",
+      "input": "/create-robot/Array2dRobot",
+      "nameinchain": "/create-robot/array2d-edit"
+    }
+  ]
+}
