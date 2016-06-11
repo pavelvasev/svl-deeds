@@ -1,0 +1,39 @@
+{
+  "title": "Превратить тримеш в каркас с нормалями",
+  "icon": "",
+  "help": "Берет меш, создает для него отрезки на сторонах треугольников, рисует нормали, и делает прозрачность исходного меша в 0",
+  "chain": [
+    {
+      "ability": "trimesh2lines",
+      "input": "/Trimesh",
+      "nameinchain": "/trimesh2lines"
+    },
+    {
+      "ability": "trimesh2normals",
+      "input": "/Trimesh",
+      "nameinchain": "/trimesh2normals"
+    },
+    {
+      "ability": "positions-as-array2d",
+      "input": "/trimesh2normals/ComputeTrimeshCenters",
+      "nameinchain": "/trimesh2normals/positions-as-array2d",
+      "initParams": [
+        {
+          "guid": "pri-izmenenii-massiva-peredavat-znacheniya-obratno-v-positions",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "ability": "manage-object-opacity",
+      "input": "/Trimesh",
+      "nameinchain": "/manage-object-opacity",
+      "initParams": [
+        {
+          "guid": "opacity",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

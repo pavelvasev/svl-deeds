@@ -1,0 +1,50 @@
+{
+  "title" : "Создать созвездия",
+  "icon": "",
+  "help": "",
+  "chain": [
+    {
+      "ability": "find-nearest-nz",
+      "input": "scene/Array2dRobot",
+      "nameinchain": "scene/find-nearest-nz"
+    },
+    {
+      "ability": "manage-object-color",
+      "input": "scene/find-nearest-nz/preobrazovat-2-v-1/array2d-to-lines/Lines",
+      "nameinchain": "scene/find-nearest-nz/preobrazovat-2-v-1/array2d-to-lines/manage-object-color",
+      "initParams": [
+        {
+          "guid": "cvet",
+          "value": "0.25 1 0.17"
+        }
+      ]
+    }, 
+    {
+      "ability": "array2d-to-points",
+      "input": "scene/Array2dRobot",
+      "nameinchain": "scene/array2d-to-points"
+    },
+    {
+      "ability": "manage-object-radius",
+      "input": "scene/array2d-to-points/Points",
+      "nameinchain": "scene/array2d-to-points/manage-object-radius",
+      "initParams": [
+        {
+          "guid": "Radius",
+          "value": 3.3
+        }
+      ]
+    },
+    {
+      "ability": "manage-object-color",
+      "input": "scene/array2d-to-points/Points",
+      "nameinchain": "scene/array2d-to-points/manage-object-color",
+      "initParams": [
+        {
+          "guid": "cvet",
+          "value": "0.74 1 0.44"
+        }
+      ]
+    }
+  ]
+}

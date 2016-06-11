@@ -1,0 +1,61 @@
+{
+  "title" : "Боевая раскраска",
+  "icon": "",
+  "help": "Выбирает и раскрашивает треугольники в красный цвет",
+  "chain": [
+    {
+      "ability": "trimesh2triangles",
+      "input": "/Trimesh",
+      "nameinchain": "/trimesh2triangles"
+    },
+    {
+      "ability": "positions-as-array2d",
+      "input": "/trimesh2triangles/TrianglesFromTrimesh",
+      "nameinchain": "/trimesh2triangles/positions-as-array2d",
+      "initParams": [
+        {
+          "guid": "pri-izmenenii-massiva-peredavat-znacheniya-obratno-v-positions",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "ability": "kajdoe-vtoroe",
+      "input": "/trimesh2triangles/positions-as-array2d/Array2dRobot",
+      "nameinchain": "/trimesh2triangles/positions-as-array2d/kajdoe-vtoroe",
+      "initParams": [
+        {
+          "guid": "brat-kazhduyu-N-yu-stroku-massiva",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "ability": "array2d-to-triangles",
+      "input": "/trimesh2triangles/positions-as-array2d/kajdoe-vtoroe/Array2dRobot",
+      "nameinchain": "/trimesh2triangles/positions-as-array2d/kajdoe-vtoroe/array2d-to-triangles"
+    },
+    {
+      "ability": "manage-object-color",
+      "input": "/trimesh2triangles/positions-as-array2d/kajdoe-vtoroe/array2d-to-triangles/Triangles",
+      "nameinchain": "/trimesh2triangles/positions-as-array2d/kajdoe-vtoroe/array2d-to-triangles/manage-object-color",
+      "initParams": [
+        {
+          "guid": "cvet",
+          "value": "1 0.14 0.14"
+        }
+      ]
+    },
+    {
+      "ability": "manage-object-opacity",
+      "input": "/trimesh2triangles/TrianglesFromTrimesh",
+      "nameinchain": "/trimesh2triangles/manage-object-opacity",
+      "initParams": [
+        {
+          "guid": "opacity",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

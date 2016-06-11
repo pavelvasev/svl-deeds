@@ -1,0 +1,94 @@
+{
+  "title": "",
+  "help": "",
+  "icon": "",
+  "chain": [
+    {
+      "ability": "load-deed-archive",
+      "input": "null",
+      "nameinchain": "/load-deed",
+      "initParams": [
+        {
+          "guid": "checked_packs",
+          "value": {
+            "visual": true,
+            "array": true
+          }
+        }
+      ]
+    },
+    {
+      "ability": "create-robot",
+      "input": "/Scene",
+      "nameinchain": "/create-robot",
+      "initParams": [
+        {
+          "guid": "type",
+          "value": "Array2dRobot"
+        }
+      ]
+    },
+    {
+      "ability": "array2d-random-generate",
+      "input": "/create-robot/Array2dRobot",
+      "nameinchain": "/create-robot/array2d-random-generate",
+      "initParams": [
+        {
+          "guid": "chislo-strok",
+          "value": 100
+        },
+        {
+          "guid": "chislo-stolbcov",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "ability": "array2d-to-points",
+      "input": "/create-robot/Array2dRobot",
+      "nameinchain": "/create-robot/array2d-to-points"
+    },
+    {
+      "ability": "manage-object-radius",
+      "input": "/create-robot/array2d-to-points/Points",
+      "nameinchain": "/create-robot/array2d-to-points/manage-object-radius",
+      "initParams": [
+        {
+          "guid": "Radius",
+          "value": 3.1
+        }
+      ]
+    },
+    {
+      "ability": "find-nearest-nz",
+      "input": "/create-robot/Array2dRobot",
+      "nameinchain": "/create-robot/find-nearest-nz"
+    },
+    {
+      "ability": "array2d-random-shift",
+      "input": "/create-robot/Array2dRobot",
+      "nameinchain": "/create-robot/array2d-random-shift",
+      "initParams": [
+        {
+          "guid": "radius-sdviga",
+          "value": 0.4
+        },
+        {
+          "guid": "prosto-parametr",
+          "value": 2374
+        }
+      ]
+    },
+    {
+      "ability": "background-color",
+      "input": "/Scene",
+      "nameinchain": "/background-color",
+      "initParams": [
+        {
+          "guid": "cvet",
+          "value": "0 0 0"
+        }
+      ]
+    }
+  ]
+}

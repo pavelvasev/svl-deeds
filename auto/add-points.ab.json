@@ -1,0 +1,52 @@
+﻿{
+  "title": "Добавить точки",
+  "auto" : true,
+  "help": "",
+  "icon": "",
+  "chain": [
+    {
+      "ability": "create-robot",
+      "input": "/Scene",
+      "nameinchain": "/create-robot#3",
+      "initParams": [
+        {
+          "guid": "type",
+          "value": "Points"
+        }
+      ]
+    },
+    {
+      "ability": "positions-as-array2d",
+      "input": "/create-robot#3/Points",
+      "nameinchain": "/create-robot#3/positions-as-array2d",
+      "initParams": [
+        {
+          "guid": "pri-izmenenii-massiva-peredavat-znacheniya-obratno-v-positions",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "ability": "array2d-edit",
+      "input": "/create-robot#3/positions-as-array2d/Array2dRobot",
+      "nameinchain": "/create-robot#3/positions-as-array2d/array2d-edit",
+      "initParams": [
+        {
+          "guid": "text",
+          "value": "3 2 7\n-5 4 3\n7 15 2\n3 3 -5\n1 2 3\n"
+        }
+      ]
+    },
+    {
+      "ability": "manage-object-radius",
+      "input": "/create-robot#3/Points",
+      "nameinchain": "/create-robot#3/manage-object-radius",
+      "initParams": [
+        {
+          "guid": "Radius",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

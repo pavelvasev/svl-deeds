@@ -1,0 +1,27 @@
+{
+  "title" : "Найти ближайшего соседа",
+  "icon": "ближ. сосед",
+  "help": "Берет два массива. Для каждой строки первого массива находит ближайшую по Евклидову расстоянию строку во втором массиве. Обе эти строки записываются в новый массив.",
+  "chain": [
+    {
+      "ability": "preobrazovat-2-v-1",
+      "input": "scene/Array2dRobot",
+      "nameinchain": "scene/preobrazovat-2-v-1",
+      "initParams": [
+        {
+          "guid": "ukazhite-vtoroy-obekt",
+          "value": 0
+        },
+        {
+          "guid": "code",
+          "value": "function convert(arr,arr2) {\n  var res = [];\n      var disable0 = true;\n      for (var i=0; i<arr.length; i++) {        \n        var ndist = 1000000000;\n        var nj = -1;\n        for (var j=0; j<arr2.length; j++) {\n          var d = 0;\n          for (var k=0; k<arr[i].length; k++)\n            d += (arr[i][k] - arr2[j][k]) * (arr[i][k] - arr2[j][k]);\n          if (d < ndist) {\nif (d == 0 && disable0 ) continue;\n            ndist = d;\n            nj = j;\n          }\n        }\n\n       if (nj >= 0) {\n          res.push( arr[i] );\n          res.push( arr2[nj] );\n       }\n      }\n      return res;\n}"
+        }
+      ]
+    },
+    {
+      "ability": "array2d-to-lines",
+      "input": "scene/preobrazovat-2-v-1/Array2dRobot",
+      "nameinchain": "scene/preobrazovat-2-v-1/array2d-to-lines"
+    }
+  ]
+}

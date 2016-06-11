@@ -1,0 +1,40 @@
+{
+  "title":"Загрузить из файла",
+  "icon": "",
+  "help": "загружает файл как csv и записывает значения в выбранный массив",
+  "chain": [
+    {
+      "ability": "zagruzit-iz",
+      "input": "scene/Array2dRobot",
+      "nameinchain": "scene/zagruzit-iz",
+      "initParams": [
+        {
+          "guid": "ukazhite-vtoroy-obekt",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "ability": "create-robot",
+      "input": "scene/Array2dRobot",
+      "nameinchain": "scene/create-robot",
+      "initParams": [
+        {
+          "guid": "type",
+          "value": "FileRobot"
+        }
+      ]
+    },
+    {
+      "ability": "file-to-array2d",
+      "input": "scene/create-robot/FileRobot",
+      "nameinchain": "scene/create-robot/file-to-array2d",
+      "initParams": [
+        {
+          "guid": "preobrazovat-v-chisla",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

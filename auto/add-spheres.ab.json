@@ -1,0 +1,41 @@
+﻿{
+  "title": "Добавить сферы",
+  "auto" : true,
+  "help": "",
+  "icon": "",
+  "chain": [
+    {
+      "ability": "create-robot",
+      "input": "/Scene",
+      "nameinchain": "/create-robot",
+      "initParams": [
+        {
+          "guid": "type",
+          "value": "Spheres"
+        }
+      ]
+    },
+    {
+      "ability": "positions-as-array2d",
+      "input": "/create-robot/Spheres",
+      "nameinchain": "/create-robot/positions-as-array2d",
+      "initParams": [
+        {
+          "guid": "pri-izmenenii-massiva-peredavat-znacheniya-obratno-v-positions",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "ability": "array2d-edit",
+      "input": "/create-robot/positions-as-array2d/Array2dRobot",
+      "nameinchain": "/create-robot/positions-as-array2d/array2d-edit",
+      "initParams": [
+        {
+          "guid": "text",
+          "value": "0 1 0\n2 5 3\n4 -2 7\n"
+        }
+      ]
+    }
+  ]
+}

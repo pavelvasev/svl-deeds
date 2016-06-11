@@ -1,0 +1,52 @@
+{
+  "icon": "",
+  "help": "",
+  "chain": [
+    {
+      "ability": "create-robot",
+      "input": "/Scene",
+      "nameinchain": "/create-robot",
+      "initParams": [
+        {
+          "guid": "type",
+          "value": "PointLight"
+        }
+      ]
+    },
+    {
+      "ability": "manage-object-xyz",
+      "input": "/create-robot/PointLight",
+      "nameinchain": "/create-robot/manage-object-xyz",
+      "initParams": [
+        {
+          "guid": "create-robotPointLight-X",
+          "value": 14
+        },
+        {
+          "guid": "create-robotPointLight-Y",
+          "value": -12
+        },
+        {
+          "guid": "create-robotPointLight-Z",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "ability": "show-light-sphere",
+      "input": "/create-robot/PointLight",
+      "nameinchain": "/create-robot/show-light-sphere"
+    },
+    {
+      "ability": "manage-object-color",
+      "input": "/create-robot/PointLight",
+      "nameinchain": "/create-robot/manage-object-color",
+      "initParams": [
+        {
+          "guid": "cvet",
+          "value": "0.3 1 0.25"
+        }
+      ]
+    }
+  ]
+}
