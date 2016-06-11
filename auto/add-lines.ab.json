@@ -1,0 +1,51 @@
+﻿{
+  "title": "Добавить отрезки",
+  "help": "",
+  "icon": "",
+  "chain": [
+    {
+      "ability": "create-robot",
+      "input": "/Scene",
+      "nameinchain": "/create-robot",
+      "initParams": [
+        {
+          "guid": "type",
+          "value": "Lines"
+        }
+      ]
+    },
+    {
+      "ability": "positions-as-array2d",
+      "input": "/create-robot/Lines",
+      "nameinchain": "/create-robot/positions-as-array2d",
+      "initParams": [
+        {
+          "guid": "pri-izmenenii-massiva-peredavat-znacheniya-obratno-v-positions",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "ability": "array2d-edit",
+      "input": "/create-robot/positions-as-array2d/Array2dRobot",
+      "nameinchain": "/create-robot/positions-as-array2d/array2d-edit",
+      "initParams": [
+        {
+          "guid": "text",
+          "value": "0 0 0\n0 1 1\n0 0 0\n-1 5 2\n0 0 1\n-3 -3 -2\n"
+        }
+      ]
+    },
+    {
+      "ability": "manage-object-color",
+      "input": "/create-robot/Lines",
+      "nameinchain": "/create-robot/manage-object-color",
+      "initParams": [
+        {
+          "guid": "cvet",
+          "value": "0 0.03 0.45"
+        }
+      ]
+    }
+  ]
+}
