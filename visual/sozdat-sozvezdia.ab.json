@@ -9,6 +9,17 @@
       "nameinchain": "scene/find-nearest-nz"
     },
     {
+      "ability": "assign-params",
+      "input": "scene/find-nearest-nz/preobrazovat-2-v-1",
+      "nameinchain": "q",
+      "initParams": [
+        {
+          "guid": "input2",
+          "value": "scene/Array2dRobot"
+        }
+      ]
+    },    
+    {
       "ability": "manage-object-color",
       "input": "scene/find-nearest-nz/preobrazovat-2-v-1/array2d-to-lines/Lines",
       "nameinchain": "scene/find-nearest-nz/preobrazovat-2-v-1/array2d-to-lines/manage-object-color",
