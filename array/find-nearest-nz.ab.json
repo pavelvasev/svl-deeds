@@ -9,7 +9,7 @@
       "nameinchain": "scene/preobrazovat-2-v-1",
       "initParams": [
         {
-          "guid": "ukazhite-vtoroy-obekt",
+          "guid": "input2",
           "value": 0
         },
         {
