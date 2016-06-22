@@ -5,19 +5,19 @@
   "chain": [
     {
       "ability": "zagruzit-iz",
-      "input": "scene/Array2dRobot",
-      "nameinchain": "scene/zagruzit-iz",
+      "input": "/Array2dRobot",
+      "nameinchain": "/zagruzit-iz",
       "initParams": [
         {
           "guid": "input2",
-          "value": "scene/create-robot/file-to-array2d/Array2dRobot"
+          "value": "/create-robot/file-to-array2d/Array2dRobot"
         }
       ]
     },
     {
       "ability": "create-robot",
-      "input": "scene/Array2dRobot",
-      "nameinchain": "scene/create-robot",
+      "input": "/Array2dRobot",
+      "nameinchain": "/create-robot",
       "initParams": [
         {
           "guid": "type",
@@ -27,14 +27,8 @@
     },
     {
       "ability": "file-to-array2d",
-      "input": "scene/create-robot/FileRobot",
-      "nameinchain": "scene/create-robot/file-to-array2d",
-      "initParams": [
-        {
-          "guid": "preobrazovat-v-chisla",
-          "value": 1
-        }
-      ]
+      "input": "/create-robot/FileRobot",
+      "nameinchain": "/create-robot/file-to-array2d"
     }
   ]
 }
