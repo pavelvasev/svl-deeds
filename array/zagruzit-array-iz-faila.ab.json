@@ -9,8 +9,8 @@
       "nameinchain": "scene/zagruzit-iz",
       "initParams": [
         {
-          "guid": "ukazhite-vtoroy-obekt",
-          "value": 0
+          "guid": "input2",
+          "value": "scene/create-robot/file-to-array2d/Array2dRobot"
         }
       ]
     },
