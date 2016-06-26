@@ -46,6 +46,26 @@
           "value": "0.2 0.45 0.13"
         }
       ]
+    },
+    {
+      "ability": "create-interface",
+      "input": "/create-robot",
+      "nameinchain": "/create-robot/create-interface",
+      "initParams": [
+        {
+          "guid": "chosen",
+          "value": [
+            {
+              "objref": "/create-robot/positions-as-array2d/array2d-edit",
+              "paramguid": "text"
+            },
+            {
+              "objref": "/create-robot/manage-object-color",
+              "paramguid": "cvet"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
